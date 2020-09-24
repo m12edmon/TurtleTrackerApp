@@ -36,6 +36,8 @@ for lineString in line_list:
     record_id = lineData[0] # ARGOS tracking record
     obs_date = lineData[2] # Observation date
     obs_lc = lineData[4] # Observation location class
+    if obs_lc not in ("1","2", "3"):
+        continue
     obs_lat = lineData[6] # Observation Latitude
     obs_lon = lineData[7] #Observation Longitude
     
